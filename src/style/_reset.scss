@@ -1,0 +1,19 @@
+@import "./utils";
+
+body {
+  box-sizing: border-box;
+  margin: 10px 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: map-get($sizes, base);
+}
+
+ul,
+p,
+h1,
+h2,
+h3 {
+  @include default;
+}
+a {
+  text-decoration: none;
+}
