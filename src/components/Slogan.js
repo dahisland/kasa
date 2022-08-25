@@ -3,8 +3,7 @@ import React from "react";
 const Slogan = () => {
   return (
     <div className="slogan">
-      <div className="slogan--opacity"></div>
-      <p> Chez vous, partout et ailleurs</p>
+      <h2> Chez vous, partout et ailleurs</h2>
     </div>
   );
 };

@@ -34,3 +34,11 @@ $weights: (
   border: none;
   background: none;
 }
+
+@mixin defaultMargin {
+  margin: 0px 100px;
+}
+
+@mixin mainMargin {
+  margin: 30px 100px;
+}
