@@ -10,7 +10,7 @@ const HomeMain = () => {
   }, []);
 
   return (
-    <main>
+    <main className="homePage_main">
       <ul className="list-cards">
         {data.map((item) => (
           <NavLink to={"/lodging-" + item.id} key={item.id} className="card">

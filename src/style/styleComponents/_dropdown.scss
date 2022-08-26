@@ -1,0 +1,88 @@
+@import "../utils";
+
+@keyframes dropdownContentAnim {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes dropdownContentAnimUp {
+  from {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+.dropdown {
+  width: 100%;
+  h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: map-get($sizes, base);
+    font-weight: map-get($weights, normal);
+    color: map-get($colors, snow);
+    background: map-get($colors, pumpkin);
+    padding: 10px 10px 10px 20px;
+    border-radius: 10px;
+    span {
+      cursor: pointer;
+      transform: rotate(180deg);
+      transition: transform 300ms;
+    }
+  }
+  .dropdown_content {
+    height: 0px;
+    background: map-get($colors, lightengrey);
+    border-radius: 10px;
+    padding: 30px 20px;
+    color: map-get($colors, pumpkin);
+    opacity: 0;
+    transform-origin: top center;
+    transform: scaleY(0);
+    animation: 200ms ease-in-out forwards dropdownContentAnimUp;
+  }
+}
+
+.dropdown--deployed {
+  width: 100%;
+  h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: map-get($sizes, base);
+    font-weight: map-get($weights, normal);
+    color: map-get($colors, snow);
+    background: map-get($colors, pumpkin);
+    padding: 10px 10px 10px 20px;
+    border-radius: 10px;
+    span {
+      cursor: pointer;
+      transform: rotate(0deg);
+      transition: transform 300ms;
+    }
+  }
+  .dropdown_content {
+    height: fit-content;
+    background: map-get($colors, lightengrey);
+    border-radius: 10px;
+    padding: 30px 20px;
+    color: map-get($colors, pumpkin);
+    margin-bottom: 30px;
+    font-size: map-get($sizes, base);
+    line-height: 25px;
+    font-weight: map-get($weights, slim);
+
+    transform-origin: top center;
+    animation: 200ms ease-in-out forwards dropdownContentAnim;
+  }
+}

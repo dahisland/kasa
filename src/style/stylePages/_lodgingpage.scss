@@ -1,0 +1,29 @@
+@import "../utils";
+
+.lodgingPage_main {
+  @include mainMargin;
+  h1 {
+    font-weight: map-get($weights, normal);
+    font-size: map-get($sizes, l);
+    color: map-get($colors, pumpkin);
+  }
+  h2 {
+    font-weight: map-get($weights, normal);
+    font-size: map-get($sizes, base);
+    color: map-get($colors, pumpkin);
+  }
+  .lodgingPageMain_infos {
+    display: flex;
+    justify-content: space-between;
+  }
+  .lodgingPageMain_description {
+    display: flex;
+    justify-content: space-between;
+    article {
+      width: 47%;
+    }
+  }
+  .dropdown--deployed .dropdown_content {
+    min-height: 189px;
+  }
+}
