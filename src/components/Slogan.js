@@ -1,9 +1,9 @@
 import React from "react";
 
-const Slogan = () => {
+const Slogan = ({ slogan, background }) => {
   return (
-    <div className="slogan">
-      <h2> Chez vous, partout et ailleurs</h2>
+    <div className={background}>
+      <h2>{slogan}</h2>
     </div>
   );
 };

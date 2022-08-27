@@ -1,0 +1,24 @@
+@import "../utils";
+
+.error404_main {
+  text-align: center;
+  @include mainMargin;
+  color: map-get($colors, pumpkin);
+  margin-bottom: 100px;
+  h1 {
+    font-size: map-get($sizes, max);
+    font-weight: map-get($colors, boldy);
+  }
+  p {
+    font-size: map-get($sizes, l);
+    font-weight: map-get($colors, normal);
+    margin-bottom: 150px;
+  }
+  a {
+    color: map-get($colors, pumpkin);
+    font-size: map-get($sizes, base);
+    font-weight: map-get($colors, normal);
+    text-decoration: underline;
+    margin-bottom: 100px;
+  }
+}

@@ -1,0 +1,21 @@
+@import "../utils";
+
+.nav {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+}
+.nav a {
+  color: map-get($colors, pumpkin);
+  font-size: map-get($sizes, m);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.nav_item--inactive {
+  text-decoration: none;
+}
+.nav_item--active {
+  text-decoration: underline;
+}

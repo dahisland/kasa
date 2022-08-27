@@ -1,0 +1,25 @@
+@import "../utils";
+
+.lodgingInfos_asideLodging {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  .asideLodging_tags {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    li {
+      background: map-get($colors, pumpkin);
+      font-size: map-get($sizes, s);
+      color: map-get($colors, snow);
+      padding: 2px 30px;
+      border-radius: 10px;
+      line-height: 19px;
+    }
+  }
+  .asideLodging_rating {
+    display: flex;
+    gap: 5px;
+  }
+}

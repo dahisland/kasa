@@ -14,7 +14,7 @@ const Dropdown = ({ dropdownContent, dropdownTitle }) => {
               : setDropdownClass("dropdown")
           }
         >
-          <img src="./arrow-icon.svg" alt="icon deploy"></img>
+          <img src="./img/arrow-icon.svg" alt="icon deploy"></img>
         </span>
       </h3>
       <div className="dropdown_content">

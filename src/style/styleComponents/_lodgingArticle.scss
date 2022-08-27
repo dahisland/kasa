@@ -1,0 +1,9 @@
+@import "../utils";
+
+.lodgingInfos_articleLodging {
+  display: flex;
+  justify-content: space-between;
+  .articleLodging_card {
+    width: 47%;
+  }
+}

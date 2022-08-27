@@ -1,51 +1,46 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Dropdown from "../components/Dropdown";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import LodgingHeader from "../components/LodgingHeader";
+import LodgingAside from "../components/LodgingAside";
+import LodgingArticle from "../components/LodgingArticle";
+import Error404 from "./Error404";
 
 const Lodging = () => {
-  const [data, setData] = useState([]);
   const { lodgingID } = useParams();
+  const [data, setData] = useState({
+    equipments: [],
+    host: { name: "", picture: "" },
+    pictures: [],
+    tags: [],
+  });
 
   useEffect(() => {
-    fetch("./data/logements.json")
-      .then((res) => res.json())
-      .then((data) => setData(data.find((item) => item.id === lodgingID)));
+    const fetchData = async () => {
+      const data = await fetch("./data/logements.json");
+      const json = await data.json();
+      const lodgingData = json.find((item) => item.id === lodgingID);
+      lodgingData ? setData(lodgingData) : setData(null);
+    };
+    fetchData();
+    // return () => {};
   }, [lodgingID]);
-  return (
+
+  return data !== null ? (
     <div>
       <Header />
       <main className="lodgingPage_main">
-        <section className="lodgingPageMain_infos">
-          <div>
-            <h1>{data.title}</h1>
-            <h2>{data.location}</h2>
-            <p>tags</p>
-          </div>
-          <div>
-            <p>Nom prénom</p>
-            <p>img</p>
-            <p>Etoiles</p>
-          </div>
-        </section>
-        <section className="lodgingPageMain_description">
-          <article className="infos_card">
-            <Dropdown
-              dropdownContent={data.description}
-              dropdownTitle="Description"
-            />
-          </article>
-          <article className="infos_card">
-            <Dropdown
-              dropdownContent={data.equipments}
-              dropdownTitle="Équipement"
-            />
-          </article>
+        <section className="lodgingPageMain_lodgingInfos">
+          <LodgingHeader data={data} />
+          <LodgingAside data={data} />
+          <LodgingArticle data={data} />
         </section>
       </main>
       <Footer />
     </div>
+  ) : (
+    <Error404 />
   );
 };
 

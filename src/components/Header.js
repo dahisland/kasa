@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header>
       <picture>
-        <img src="./logo-kasa.svg" alt="logo" />
+        <img src="./img/logo-kasa.svg" alt="logo" />
       </picture>
       <Navigation />
     </header>
