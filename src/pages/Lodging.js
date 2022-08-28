@@ -6,6 +6,7 @@ import LodgingHeader from "../components/LodgingHeader";
 import LodgingAside from "../components/LodgingAside";
 import LodgingArticle from "../components/LodgingArticle";
 import Error404 from "./Error404";
+import LodgingGallery from "../components/LodgingGallery";
 
 const Lodging = () => {
   const { lodgingID } = useParams();
@@ -15,8 +16,10 @@ const Lodging = () => {
     pictures: [],
     tags: [],
   });
+  // const [indexGallery, setIndexGallery] = useState(0);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchData = async () => {
       const data = await fetch("./data/logements.json");
       const json = await data.json();
@@ -31,6 +34,7 @@ const Lodging = () => {
     <div>
       <Header />
       <main className="lodgingPage_main">
+        <LodgingGallery data={data} />
         <section className="lodgingPageMain_lodgingInfos">
           <LodgingHeader data={data} />
           <LodgingAside data={data} />

@@ -1,24 +1,4 @@
 @import "../utils";
-@import "../styleComponents/lodgingGallery";
-@import "../styleComponents/lodgingHeader";
-@import "../styleComponents/lodgingAside";
-@import "../styleComponents/lodgingArticle";
-
-.lodgingPage_main {
-  @include mainMargin;
-  .dropdown--deployed .dropdown_content {
-    min-height: 220px;
-  }
-}
-
-@keyframes animGallery {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
 
 .lodgingGallery_containerGallery {
   position: relative;
@@ -43,7 +23,7 @@
   }
   .containerGallery_navButtons {
     position: absolute;
-    z-index: 50;
+    z-index: 2;
     left: 0;
     top: 50%;
     transform: translateY(-50%);

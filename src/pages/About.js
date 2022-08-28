@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Dropdown from "../components/Dropdown";
 import Slogan from "../components/Slogan";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const aboutData = [
     {
       title: "Fiabilité",

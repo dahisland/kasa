@@ -2,22 +2,18 @@
 
 @keyframes dropdownContentAnim {
   from {
-    opacity: 0;
     transform: scaleY(0);
   }
   to {
-    opacity: 1;
     transform: scaleY(1);
   }
 }
 
 @keyframes dropdownContentAnimUp {
   from {
-    opacity: 1;
     transform: scaleY(1);
   }
   to {
-    opacity: 0;
     transform: scaleY(0);
   }
 }
@@ -91,7 +87,7 @@
     font-size: map-get($sizes, base);
     line-height: map-get($sizes, lineheight);
     font-weight: map-get($weights, slim);
-
+    opacity: 1;
     transform-origin: top center;
     animation: 200ms ease-in-out forwards dropdownContentAnim;
   }

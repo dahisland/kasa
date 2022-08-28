@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Dropdown = ({ dropdownContent, dropdownTitle }) => {
-  const [dropdownClass, setDropdownClass] = useState("dropdown--deployed");
+  const [dropdownClass, setDropdownClass] = useState("dropdown");
 
   return (
     <div className={dropdownClass}>
