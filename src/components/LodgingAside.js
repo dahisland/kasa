@@ -5,11 +5,15 @@ const LodgingAside = ({ data }) => {
 
   return (
     <aside className="lodgingInfos_asideLodging">
-      <ul className="asideLodging_tags">
-        {data.tags.map((tag, index) => (
-          <li key={data.id + "-" + tag + "-" + index}>{tag}</li>
-        ))}
-      </ul>
+      <div className="asideLodging_landlord">
+        <div className="landlord_identity">
+          <p>
+            {data.host.name.split(" ")[0]} <br />
+            {data.host.name.split(" ")[1]}{" "}
+          </p>
+          <img src={data.host.picture} alt={data.host.name}></img>
+        </div>
+      </div>
       <ul className="asideLodging_rating">
         {range.map((el, index) =>
           el <= data.rating ? (

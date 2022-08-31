@@ -1,25 +1,49 @@
 @import "../utils";
 
 .lodgingInfos_asideLodging {
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
-  .asideLodging_tags {
+  @include responsiveMobile {
+    width: 100%;
+    flex-direction: row-reverse;
+  }
+
+  .landlord_identity {
     display: flex;
-    gap: 10px;
     align-items: center;
-    li {
-      background: map-get($colors, pumpkin);
-      font-size: map-get($sizes, s);
-      color: map-get($colors, snow);
-      padding: 2px 30px;
-      border-radius: 10px;
-      line-height: 19px;
+    gap: 10px;
+    p {
+      text-align: right;
+      line-height: map-get($sizes, lineheight);
+      font-size: map-get($sizes, base);
+      font-weight: map-get($weights, normal);
+      color: map-get($colors, pumpkin);
+      @include responsiveMobile {
+        font-size: map-get($sizes, xs);
+        line-height: map-get($sizes, base);
+      }
+    }
+    img {
+      width: 64px;
+      height: 64px;
+      border-radius: 32px;
+      @include responsiveMobile {
+        width: 32px;
+        height: 32px;
+      }
     }
   }
   .asideLodging_rating {
     display: flex;
     gap: 5px;
+    @include responsiveMobile {
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
   }
 }

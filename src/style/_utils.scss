@@ -40,6 +40,26 @@ $weights: (
   margin: 0px 100px;
 }
 
+@mixin defaultMarginMobile {
+  margin: 0px 20px;
+}
+
 @mixin mainMargin {
   margin: 30px 100px;
+}
+
+@mixin mainMarginMobile {
+  margin: 30px 20px;
+}
+
+@mixin responsiveMobile {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin responsiveMobileXS {
+  @media screen and (max-width: 340px) {
+    @content;
+  }
 }

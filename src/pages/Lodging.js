@@ -31,13 +31,15 @@ const Lodging = () => {
   }, [lodgingID]);
 
   return data !== null ? (
-    <div>
+    <div className="contentPage">
       <Header />
       <main className="lodgingPage_main">
         <LodgingGallery data={data} />
         <section className="lodgingPageMain_lodgingInfos">
-          <LodgingHeader data={data} />
-          <LodgingAside data={data} />
+          <div className="lodgingInfos_general">
+            <LodgingHeader data={data} />
+            <LodgingAside data={data} />
+          </div>
           <LodgingArticle data={data} />
         </section>
       </main>

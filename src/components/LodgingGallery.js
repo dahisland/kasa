@@ -9,7 +9,7 @@ const LodgingGallery = ({ data }) => {
         <picture>
           <img
             src={data.pictures[indexGallery]}
-            alt=""
+            alt={"image " + data.pictures[indexGallery]}
             className="containerGallery_image"
           ></img>
         </picture>

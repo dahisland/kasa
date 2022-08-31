@@ -13,5 +13,9 @@ footer {
   }
   p {
     margin-top: 45px;
+    @include responsiveMobile {
+      margin-top: 20px;
+      font-size: map-get($sizes, xs);
+    }
   }
 }

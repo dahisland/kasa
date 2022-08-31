@@ -10,12 +10,15 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div>
-      <Header />
-      <Slogan
-        slogan="Chez vous, partout et ailleurs"
-        background="slogan--sea"
-      />
+    <div className="contentPage">
+      <div>
+        <Header />
+        <Slogan
+          slogan1="Chez vous, "
+          slogan2="partout et ailleurs"
+          background="slogan--sea"
+        />
+      </div>
       <main className="homepage_main">
         <LodgingList />
       </main>

@@ -9,7 +9,7 @@ const Error404 = () => {
   }, []);
 
   return (
-    <div>
+    <div className="contentPage">
       <Header />
       <main className="error404_main">
         <h1>404</h1>

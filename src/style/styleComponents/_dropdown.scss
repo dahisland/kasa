@@ -32,10 +32,21 @@
     background: map-get($colors, pumpkin);
     padding: 10px 10px 10px 20px;
     border-radius: 10px;
+    @include responsiveMobile {
+      padding: 5px 7px 7px 10px;
+      font-size: 13px;
+      border-radius: 5px;
+    }
     span {
       cursor: pointer;
       transform: rotate(180deg);
       transition: transform 300ms;
+      @include responsiveMobile {
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
     }
   }
   .dropdown_content {
@@ -51,6 +62,9 @@
     transform-origin: top center;
     transform: scaleY(0);
     animation: 200ms ease-in-out forwards dropdownContentAnimUp;
+    @include responsiveMobile {
+      padding: 25px 15px 15px 15px;
+    }
   }
 }
 
@@ -68,10 +82,21 @@
     background: map-get($colors, pumpkin);
     padding: 10px 10px 10px 20px;
     border-radius: 10px;
+    @include responsiveMobile {
+      padding: 5px 7px 7px 10px;
+      font-size: 13px;
+      border-radius: 5px;
+    }
     span {
       cursor: pointer;
       transform: rotate(0deg);
       transition: transform 300ms;
+      @include responsiveMobile {
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
     }
   }
   .dropdown_content {
@@ -90,5 +115,12 @@
     opacity: 1;
     transform-origin: top center;
     animation: 200ms ease-in-out forwards dropdownContentAnim;
+    @include responsiveMobile {
+      padding: 25px 10px 10px 10px;
+      font-size: map-get($sizes, xs);
+      line-height: map-get($sizes, base);
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
   }
 }

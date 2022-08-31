@@ -32,9 +32,12 @@ const About = () => {
     },
   ];
   return (
-    <div>
-      <Header />
-      <Slogan slogan="" background="slogan--mountain" />
+    <div className="contentPage">
+      <div>
+        <Header />
+        <Slogan slogan1="" slogan2="" background="slogan--mountain" />
+      </div>
+
       <main className="about_main">
         <Dropdown
           dropdownContent={aboutData[0].content}
