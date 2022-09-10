@@ -1,10 +1,13 @@
 import React from "react";
 import Navigation from "./Navigation";
+import logo from "../assets/logo-kasa.svg";
 
 const Header = () => {
   return (
     <header id="header">
-      <div className="header_logo" aria-label="Image logo"></div>
+      <picture>
+        <img src={logo} alt="logo" />
+      </picture>
       <Navigation />
     </header>
   );
