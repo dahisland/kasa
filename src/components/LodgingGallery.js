@@ -22,9 +22,9 @@ const LodgingGallery = ({ data }) => {
         >
           <picture
             onClick={() =>
-              indexGallery < data.pictures.length - 1
-                ? setIndexGallery(indexGallery + 1)
-                : setIndexGallery(0)
+              indexGallery > 0
+                ? setIndexGallery(indexGallery - 1)
+                : setIndexGallery(data.pictures.length - 1)
             }
           >
             <img
