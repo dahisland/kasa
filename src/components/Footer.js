@@ -3,9 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer>
-      <picture>
-        <img src="./img/logo-kasa-white.svg" alt="logo" />
-      </picture>
+      <div className="footer_logo" aria-label="Image logo"></div>
       <p>©2020 Kasa. All rights reserved</p>
     </footer>
   );

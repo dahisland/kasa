@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/lodging-:lodgingID" element={<Lodging />} />
+        <Route path="/lodging:lodgingID" element={<Lodging />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>

@@ -4,9 +4,7 @@ import Navigation from "./Navigation";
 const Header = () => {
   return (
     <header id="header">
-      <picture>
-        <img src="./img/logo-kasa.svg" alt="logo" />
-      </picture>
+      <div className="header_logo" aria-label="Image logo"></div>
       <Navigation />
     </header>
   );

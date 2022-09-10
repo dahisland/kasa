@@ -17,7 +17,7 @@ const LodgingList = () => {
     <ul className="homepageMain_lodgingList">
       {data.map((item, index) => (
         <li className="lodgingList_card" key={item.id + "-lodging-" + index}>
-          <NavLink to={"/lodging-" + item.id}>
+          <NavLink to={"/lodging" + item.id}>
             <h3>{item.title}</h3>
             <picture>
               <img src={item.cover} alt={item.title}></img>
