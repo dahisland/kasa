@@ -13,6 +13,9 @@ const LodgingGallery = ({ data }) => {
             className="containerGallery_image"
           ></img>
         </picture>
+        <p className="containerGallery_counter">
+          {indexGallery + 1}/{data.pictures.length}
+        </p>
         <div
           className={
             data.pictures.length > 1

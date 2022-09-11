@@ -17,6 +17,17 @@
       height: 255px;
     }
   }
+  .containerGallery_counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: map-get($weights, normal);
+    color: map-get($colors, snow);
+    @include responsiveMobile {
+      display: none;
+    }
+  }
   .containerGallery_navButtons--disabled {
     position: absolute;
     z-index: 0;
