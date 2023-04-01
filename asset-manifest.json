@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/kasa/static/css/main.46e6eea9.css",
+    "main.js": "/kasa/static/js/main.98f82ee7.js",
+    "static/media/background-slogan-mountains.png": "/kasa/static/media/background-slogan-mountains.fce6fc3e9ed27433e9b0.png",
+    "static/media/background-slogan.png": "/kasa/static/media/background-slogan.efc1935eb81fc5e585f9.png",
+    "static/media/logo-kasa.svg": "/kasa/static/media/logo-kasa.e49649bd7a5c7bfed9d7f02274b9059c.svg",
+    "static/media/logo-kasa-white.svg": "/kasa/static/media/logo-kasa-white.bbc471f4e578a3f407fa205b37aa07c8.svg",
+    "index.html": "/kasa/index.html",
+    "main.46e6eea9.css.map": "/kasa/static/css/main.46e6eea9.css.map",
+    "main.98f82ee7.js.map": "/kasa/static/js/main.98f82ee7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46e6eea9.css",
+    "static/js/main.98f82ee7.js"
+  ]
+}
